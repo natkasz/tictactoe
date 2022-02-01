@@ -9,6 +9,7 @@ class Sprawdzanie(unittest.TestCase):
         m.ruch('O', 8)
         m.ruch('X', 6)
         assert m.wygranie_x() == 'X'
+
     def test_wygranie_o(self):
         m.ruch('O', 0)
         m.ruch('X', 1)
@@ -16,6 +17,11 @@ class Sprawdzanie(unittest.TestCase):
         m.ruch('X', 8)
         m.ruch('O', 6)
         assert m.wygranie_o() == 'O'
+
+    def test_walidacji(self):
+        m.ruch('X',4)
+        assert m.ruch('O',4) == 1
+
 
 if __name__ == "__main__":
     unittest.main()
